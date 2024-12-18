@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const songApi = createApi({
   reducerPath: 'api/songs',
   baseQuery: fetchBaseQuery({
-    baseUrl: `${process.env.REACT_APP_API_URL}/`,
+    baseUrl: `/`,
     prepareHeaders: (headers) => {
       const token = window.localStorage.getItem('token');
       if (token) {

@@ -286,7 +286,9 @@ function App() {
           {isLoading ? (
             'Loading'
           ) : error ? (
-            <div className='text-red-700'>{error}</div>
+            <div className='text-red-700'>
+              {error?.data?.message || 'Something went wrong'}
+            </div>
           ) : songs.length ? (
             <ul className='songs__list'>
               <Songs songs={songs} />
