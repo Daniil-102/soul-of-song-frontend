@@ -8,8 +8,13 @@
   padding: 0;
 }
 
+:root {
+  --vh: 100vh;
+}
+
 html,
 body {
+  height: calc(var(--vh));
   overflow-x: hidden;
   font-family: 'Josefin Sans', serif;
   font-family: 'Shantell Sans', serif;
@@ -17,10 +22,15 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  @media (min-width: 640px) {
+}
+
+@media (min-width: 640px) {
+  body {
     background-image: url(images/forest-md.jpg);
   }
-  @media (min-width: 1920px) {
+}
+@media (min-width: 1920px) {
+  body {
     background-image: url(images/forest.jpg);
   }
 }
