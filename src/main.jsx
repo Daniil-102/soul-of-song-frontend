@@ -12,7 +12,7 @@ import { Settings } from './components/Settings.jsx';
 import { About } from './components/About.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <Router>
+  <Router basename='/'>
     <Provider store={store}>
       <StrictMode>
         <Routes>
